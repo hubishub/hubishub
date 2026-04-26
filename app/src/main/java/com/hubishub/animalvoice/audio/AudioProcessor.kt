@@ -1,8 +1,6 @@
 package com.hubishub.animalvoice.audio
 
 import android.content.Context
-import android.media.AudioFormat
-import android.media.AudioRecord
 import android.media.MediaPlayer
 import android.media.MediaRecorder
 import android.media.PlaybackParams
@@ -10,30 +8,18 @@ import android.os.Build
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
-import java.nio.ByteBuffer
-import java.nio.ByteOrder
 
 class AudioProcessor(private val context: Context) {
 
     companion object {
         private const val SAMPLE_RATE = 44100
-        private const val CHANNEL_CONFIG = AudioFormat.CHANNEL_IN_MONO
-        private const val AUDIO_FORMAT = AudioFormat.ENCODING_PCM_16BIT
-        private const val WAV_HEADER_SIZE = 44
     }
 
-    private var audioRecord: AudioRecord? = null
     private var mediaRecorder: MediaRecorder? = null
     private var mediaPlayer: MediaPlayer? = null
     private var isRecording = false
 
-    private val bufferSize = AudioRecord.getMinBufferSize(SAMPLE_RATE, CHANNEL_CONFIG, AUDIO_FORMAT)
-        .coerceAtLeast(4096)
-
     val recordedFile: File get() = File(context.cacheDir, "recorded_voice.m4a")
-    private val processedFile: File get() = File(context.cacheDir, "processed_voice.m4a")
 
     fun startRecording() {
         stopRecording()
@@ -125,7 +111,5 @@ class AudioProcessor(private val context: Context) {
     fun release() {
         stopRecording()
         stopPlayback()
-        audioRecord?.release()
-        audioRecord = null
     }
 }

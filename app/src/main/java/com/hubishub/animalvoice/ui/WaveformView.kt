@@ -7,7 +7,6 @@ import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
-import kotlin.math.abs
 import kotlin.random.Random
 
 class WaveformView @JvmOverloads constructor(

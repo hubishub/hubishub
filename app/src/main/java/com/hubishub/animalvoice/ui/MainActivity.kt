@@ -5,17 +5,12 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.hubishub.animalvoice.R
 import com.hubishub.animalvoice.databinding.ActivityMainBinding
 
