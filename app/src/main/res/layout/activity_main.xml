@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <!-- Top bar -->
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Animal Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_animals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="12dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/card_recorder"
+        app:layout_constraintVertical_weight="1" />
+
+    <!-- Recorder Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_recorder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_recorder_bg"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="16dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="24dp"
+            android:paddingHorizontal="20dp">
+
+            <!-- Selected Animal emoji -->
+            <TextView
+                android:id="@+id/tv_selected_animal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🐶"
+                android:textSize="52sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_animal_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dog"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_selected_animal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_animal_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Woof! Playful &amp; excited"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_animal_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Waveform -->
+            <com.hubishub.animalvoice.ui.WaveformView
+                android:id="@+id/waveform_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/tv_animal_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Hint text -->
+            <TextView
+                android:id="@+id/tv_record_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hold_to_record"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toBottomOf="@id/waveform_view"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Mic Button -->
+            <ImageButton
+                android:id="@+id/btn_record"
+                android:layout_width="76dp"
+                android:layout_height="76dp"
+                android:background="@drawable/bg_mic_button"
+                android:src="@drawable/ic_mic"
+                android:scaleType="centerInside"
+                android:padding="20dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_record_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Play again button -->
+            <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_play_button"
+                android:src="@drawable/ic_play"
+                android:scaleType="centerInside"
+                android:padding="12dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@id/btn_record"
+                app:layout_constraintBottom_toBottomOf="@id/btn_record"
+                app:layout_constraintStart_toEndOf="@id/btn_record"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

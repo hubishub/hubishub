@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="primary">#FF6B35</color>
+    <color name="primary_dark">#E55A28</color>
+    <color name="accent">#FFD700</color>
+
+    <!-- Backgrounds -->
+    <color name="background_dark">#121212</color>
+    <color name="card_recorder_bg">#1E1E2E</color>
+    <color name="animal_card_bg">#1A1A2A</color>
+    <color name="animal_selected_bg">#2A1F3D</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAACC</color>
+
+    <!-- Mic button -->
+    <color name="mic_button_bg">#FF6B35</color>
+    <color name="mic_button_active">#FF3B30</color>
+    <color name="play_button_bg">#2A2A3E</color>
+
+    <!-- Selection -->
+    <color name="selected_dot">#FF6B35</color>
+
+    <!-- Status bar -->
+    <color name="status_bar">#0D0D1A</color>
+</resources>
