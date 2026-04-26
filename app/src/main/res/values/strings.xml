@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Animal Voice Translator</string>
+    <string name="splash_subtitle">Speak in your language,\nbe heard as an animal!</string>
+    <string name="hold_to_record">Hold the mic to record your voice</string>
+    <string name="release_to_play">Release to play as animal…</string>
+    <string name="playing_as_animal">Playing your animal voice…</string>
+    <string name="select_animal">Choose your animal</string>
+    <string name="permission_denied">Microphone permission denied</string>
+</resources>
