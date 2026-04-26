@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="32dp"
-    android:height="32dp"
-    android:viewportWidth="32"
-    android:viewportHeight="32">
-    <text android:x="0" android:y="28" android:textSize="28" android:fillColor="#FFFFFF">🐶</text>
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M12,16.5c-2.5,0 -4.5,1.12 -4.5,2.5S9.5,21.5 12,21.5s4.5,-1.12 4.5,-2.5S14.5,16.5 12,16.5z" />
+    <circle android:fillColor="#FF6B35" android:cx="8" android:cy="14" android:r="1.8" />
+    <circle android:fillColor="#FF6B35" android:cx="16" android:cy="14" android:r="1.8" />
+    <circle android:fillColor="#FF6B35" android:cx="6.5" android:cy="11" android:r="1.5" />
+    <circle android:fillColor="#FF6B35" android:cx="17.5" android:cy="11" android:r="1.5" />
 </vector>

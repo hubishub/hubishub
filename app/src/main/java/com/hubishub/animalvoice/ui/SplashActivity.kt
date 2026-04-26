@@ -8,7 +8,6 @@ import android.os.Looper
 import android.view.animation.AlphaAnimation
 import android.view.animation.AnimationSet
 import android.view.animation.ScaleAnimation
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.hubishub.animalvoice.R
@@ -20,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val logo = findViewById<ImageView>(R.id.splash_logo)
+        val logo = findViewById<TextView>(R.id.splash_logo)
         val title = findViewById<TextView>(R.id.splash_title)
         val subtitle = findViewById<TextView>(R.id.splash_subtitle)
 
